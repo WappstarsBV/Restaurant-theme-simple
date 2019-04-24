@@ -13,15 +13,17 @@ var source = require( 'vinyl-source-stream' );
 var buffer = require( 'vinyl-buffer' );
 var browserSync = require( 'browser-sync' ).create();
 
+
 var styleSRC = './src/scss/style.scss';
 var styleDIST = './dist/css/';
 var styleWatch = './src/scss/**/*.scss';
 
-var jsSRC = 'script.js';
+
+var manifest = 'manifest.js';
 var jsFolder = './src/js/';
 var jsDIST = './dist/js/';
 var jsWatch = './src/js/**/*.js';
-var jsFILES = [jsSRC];
+var jsFILES = [manifest];
 
 // Browser sync options
 var browserSyncOption = {
@@ -45,7 +47,7 @@ var config = {
     get sassPlugin(){
         return [
             // Bootstrap
-            //this.nodeDir + '/bootstrap/scss',
+            this.nodeDir + '/bootstrap/scss',
         ]
     }
 };
@@ -93,6 +95,7 @@ gulp.task('scripts', function(done) { // Define callback for explicit finish - h
         .pipe( uglify() )
         .pipe( sourcemaps.write( './' ) )
         .pipe( gulp.dest( jsDIST ) )
+        .pipe(notify({ title: 'Scripts', message: 'Task complete.', onLast: true }));
     });
     done(); // Callback here
 });
