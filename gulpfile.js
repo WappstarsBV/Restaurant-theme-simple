@@ -23,6 +23,34 @@ var jsDIST = './dist/js/';
 var jsWatch = './src/js/**/*.js';
 var jsFILES = [jsSRC];
 
+// Browser sync options
+var browserSyncOption = {
+    files: [
+        './src/scss/**/*.scss',
+        './src/js/**/*.js',
+        './**/*.php',
+        './template-parts/**/*.php'
+    ],
+    config: {
+        watchTask: true,
+        proxy: "http://localhost/" + themeName + '/'
+    }
+};
+
+// CSS/Scss plugins options
+var config = {
+    nodeDir: './node_modules',
+
+    // Insert all the css/scss plugins here
+    get sassPlugin(){
+        return [
+            // Bootstrap
+            //this.nodeDir + '/bootstrap/scss',
+        ]
+    }
+};
+
+
 /**
  * Styles task
  */
@@ -31,7 +59,8 @@ gulp.task('styles', function(done) { // Define callback for explicit finish - ht
         .pipe( sourcemaps.init() )
         .pipe( sass({
             errorLogToConsole: true,
-            outputStyle: 'compressed'
+            outputStyle: 'compressed',
+            includePaths: config.sassPlugin,
         }) )
         .on( 'error', console.error.bind( console ) )
         .pipe( autoprefixer({
@@ -73,20 +102,6 @@ gulp.task('scripts', function(done) { // Define callback for explicit finish - h
  * Browser sync task
  */
 gulp.task('browser-sync', function(done) {
-    //Browser sync options
-    browserSyncOption = {
-		files: [
-			'./src/scss/**/*.scss',
-			'./src/js/**/*.js',
-			'./**/*.php',
-			'./template-parts/**/*.php'
-		],
-		config: {
-			watchTask: true,
-			proxy: "http://localhost/" + themeName + '/'
-		}
-    }
-    
     browserSync.init(browserSyncOption.files, browserSyncOption.config);
 	gulp.watch(browserSyncOption.files).on('change', function(){
 		browserSync.reload();
