@@ -1,0 +1,83 @@
+.site-branding {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 15%;
+    float: left;
+}
+
+.custom-logo-link {
+    max-width: 90px;
+    display: block;
+}
+
+.menu-and-contact {
+    width: 85%;
+    float: right;
+    text-align: right;
+
+    .contact {
+        padding-bottom: .375rem;
+
+        a {
+            display: inline-block;
+            margin-right: .85rem;
+            color: $black;
+            font-size: 12px;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            span {
+                display: inline-block;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .menu-primary-menu-container {
+        border-top: 1px solid $main-color;
+        padding-top: .375rem;
+
+        > ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+
+                &.current_page_item a {
+                    color: $main-color;
+                }
+
+                &:last-of-type a {
+                    color: $white;
+                    background-color: $main-color;
+                    border-radius: map-get($bdr, 2);
+                    transition: map-get($trans, 150);
+
+                    &:hover {
+                        text-decoration: none;
+                        background-color: darken($main-color, 5%);
+                    }
+                }
+
+                a {
+                    display: inline-block;
+                    color: $black;
+                    padding: .1rem .5rem;
+                    font-weight: $fwn;
+                }
+            }
+        }
+    }
+}
