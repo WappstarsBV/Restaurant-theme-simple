@@ -11,6 +11,24 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
+
+
+ // Custom backend CSS
+function my_custom_css() {
+	echo 
+	'
+	<style>
+	  .hndle.ui-sortable-handle > span{
+		font-size: 18px;
+		font-weight: bold;
+	  } 
+	</style>
+	';
+  }
+  add_action('admin_head', 'my_custom_css');
+
+
+  
 function rt_uno_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
@@ -151,6 +169,12 @@ if( function_exists('acf_add_options_page') ) {
 	  'menu_slug'   => 'theme-general-settings',
 	  'capability'  => 'edit_posts',
 	  'redirect'    => false
+	));
+	
+	acf_add_options_sub_page(array(
+	  'page_title'  => 'Homepage settings',
+	  'menu_title'  => 'Homepage',
+	  'parent_slug' => 'theme-general-settings',
 	));
 	
   }

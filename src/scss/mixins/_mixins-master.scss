@@ -27,3 +27,34 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+
+/// Button style - every day I'm hustlin'
+/// @params - $color, $bg, $ptb, $prl, $trans
+/// USE e.g. @include button($white, 1rem, $green, .375rem, .75rem, $trans, $bdr);
+@mixin button($color, $fz, $ptb, $prl, $trans, $bdr) {
+	display: inline-block;
+	color: $color;
+	font-size: $fz;
+	padding: $ptb $prl;
+	border: 1px solid $color;
+	border-radius: $bdr;
+	transition: $trans;
+  
+	&:hover {
+	  color: darken($color, 7%);
+	  border: 1px solid darken($color, 7%);
+	  cursor: pointer;
+	  text-decoration: none;
+	}
+  }
+
+  
+  /// Background image
+  /// @params - $x, $y, $size, $repeat
+  /// USE @include background(center, center, cover, no-repeat);
+  @mixin background($x, $y, $size, $repeat) {
+	background-position: $x $y;
+	background-size: $size;
+	background-repeat: $repeat;
+  }

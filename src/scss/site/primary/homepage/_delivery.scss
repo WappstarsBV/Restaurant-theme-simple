@@ -1,0 +1,68 @@
+.rt-uno-delivery {
+    width: 100%;
+    padding: 15rem 0;
+
+    .delivery-content {
+        position: relative;
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+
+        h2 {
+            font-family: $font__title;
+        }
+
+        a {
+            display: inline-block;
+            position: relative;
+
+            &::after {
+                display: inline-block;
+                position: relative;
+                content: '';
+                width: 18px;
+                height: 18px;
+                margin-left: 1.5rem;
+                bottom: -2px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+            }
+
+            &:first-of-type {
+                margin-right: 1rem;
+
+                &::after {
+                    background-image: url(../../images/location.jpg);
+                }
+            }
+
+            &:last-of-type {
+                &::after {
+                    background-image: url(../../images/scooter.jpg);
+                }
+            }
+        }
+
+        .content-image {
+            width: 420px;
+            height: 360px;
+            @include background(center, center, contain, no-repeat);
+            position: absolute;
+
+            &#image_1 {
+                top: auto;
+                right: auto;
+                left: -100%;
+                bottom: 0;
+            }
+
+            &#image_2 {
+                top: 0;
+                right: -100%;
+                left: auto;
+                bottom: auto;
+            }
+        }
+    }
+}

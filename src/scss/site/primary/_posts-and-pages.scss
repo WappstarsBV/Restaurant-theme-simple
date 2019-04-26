@@ -21,3 +21,7 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+a.button {
+	@include button($main-color, $fz, .375rem, 1.5rem, map-get($trans, 150), map-get($bdr, 3));
+}

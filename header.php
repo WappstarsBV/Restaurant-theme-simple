@@ -37,7 +37,7 @@
 				<div class="contact">
 					<?php 
 					$tel = get_field('telefoon_general', 'option');
-					$email = get_field('e-mail_adres_general', 'option');
+					$email = get_field('e_mail_adres_general', 'option');
 
 					if($email) {
 						echo '<a href="mailto:'. $email .'" class="email"><b>Email ons:</b> <span>'. $email .'</span></a>';
@@ -62,5 +62,5 @@
 	<div id="content" class="site-content">
 	<?php (is_front_page()) ? $container = 'container-fluid' : $container = 'container'; ?>
 
-	<div class="<?php echo $container;?> <?php echo $shop_class;?>">
+	<div class="<?php echo $container;?>">
 		<div class="row">
