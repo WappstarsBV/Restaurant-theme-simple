@@ -17,18 +17,23 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info container">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'rt-uno' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'rt-uno' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'rt-uno' ), 'rt-uno', '<a href="http://www.wappstars.nl">Petar Ratkovic</a>' );
-				?>
+		<div class="legals-menu container clearfix">
+		<?php 
+		//if(has_nav_menu( 'legals' )) {
+			headlab_menu('legals'); 
+		//}
+		?>
+		</div><!-- /.legals-menu -->
+		<div class="openings container clearfix">
+			<?php esc_html_e('Openingstijden', 'rt-uno'); ?> - <?php the_field('openings', 'options'); ?>
+		</div><!-- /.openings -->
+		<div class="site-info container clearfix">
+			<div class="copy">
+				&copy; copyright <b><?php bloginfo( 'name' ); ?></b> <?php echo date("Y"); ?>
+			</div><!-- /.copy -->
+			<div class="made-by">
+				Made by <a href="https://wappstars.nl" target="_blank"><b>WappStars</b></a>
+			</div><!-- /.made-by -->
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

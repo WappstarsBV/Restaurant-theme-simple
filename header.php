@@ -48,7 +48,7 @@
 					}
 					?>
 				</div><!-- /.contact -->
-				<?php (has_nav_menu( 'primary' )) ? wp_nav_menu( array('location' => 'primary') ) : ''; ?>
+				<?php (has_nav_menu( 'primary' )) ? wp_nav_menu( array('theme_location' => 'primary') ) : ''; ?>
 			</div><!-- /.menu-and-contact -->
 
 		</div><!-- .site-branding -->
