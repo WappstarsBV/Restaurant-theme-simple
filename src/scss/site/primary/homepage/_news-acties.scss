@@ -1,0 +1,114 @@
+.rt-uno-news-acties {
+    padding: 7rem 0 10rem 0;
+    width: 100%;
+    @include gradient-y($main-color, darken($main-color, 10%), 15%, 100%);
+
+    > div {
+        position: relative;
+        z-index: 1;
+
+        .na-image {
+            position: absolute;
+            @include background(center, center, contain, no-repeat);
+            transition: map-get( $trans, 450 );
+            z-index: -1;
+
+            &.na-top-image {
+                top: 0;
+                left: -170px;
+                opacity: 0;
+                visibility: hidden;
+
+                &.na-top-image-visible {
+                    opacity: 1;
+                    visibility: visible;
+                    left: -150px;
+                }
+            }
+
+            &.na-bottom-image {
+                bottom: -150px;
+                right: -170px;
+                opacity: 0;
+                visibility: hidden;
+
+                &.na-bottom-image-visible {
+                    opacity: 1;
+                    visibility: visible;
+                    right: -150px;
+                }
+            }
+        }
+    }
+    
+    .news-acties-content {
+        width: 50%;
+        margin: 0 auto 3rem auto;
+        color: $white;
+        text-align: center;
+    }
+
+    .news-acties-posts {
+        position: relative;
+        width: 70%;
+        margin: 0 auto;
+        z-index: 100;
+
+        .na-post {
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: map-get($bdr, 2);
+            background-color: $white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+            &:hover {
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+                p {
+                    border-color: darken($color__background-screen, 2%);
+                }
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            > a {
+                color: $black;
+                text-decoration: none;
+            }
+
+            h3 {
+                width: 70%;
+                float: left;
+                font-size: 22px;
+            }
+
+            span {
+                display: block;
+                width: 30%;
+                float: right;
+                font-size: 14px;
+                text-align: right;
+                color: $color__border-abbr;
+            }
+
+            p {
+                margin-bottom: 0;
+                padding-top: .5rem;
+                border-top: 1px solid lighten($color__background-screen, 2%);
+            }
+        }
+    }
+
+    .news-acties-button {
+        text-align: center;
+        margin-top: 3rem;
+
+        a.button {
+            color: $white;
+            border-color: $white;
+        }
+    }
+}

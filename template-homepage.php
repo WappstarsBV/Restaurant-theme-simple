@@ -21,4 +21,6 @@ foreach ( $option_fields as $key => $value ) {
 
 <?php include ( get_stylesheet_directory() . '/template-parts/homepage/catering.php' ); ?>
 
+<?php include ( get_stylesheet_directory() . '/template-parts/homepage/news-acties.php' ); ?>
+
 <?php get_footer(); ?>

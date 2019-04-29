@@ -16,4 +16,7 @@
         </div><!-- /.catering-content -->
     </div><!-- /.container -->
     <div class="bottom-image" id="catering-spices" style="background-image: url(<?php echo $afbeelding_1_cat['url']; ?>)"></div><!-- /.bottom-image -->
+    <div class="bottom-curve">
+    <?php include ( get_stylesheet_directory() . '/images/white-curve-reflect.svg' ); ?>
+    </div>
 </div><!-- /.rt-uno-catering -->
