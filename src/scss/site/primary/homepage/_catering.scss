@@ -1,0 +1,68 @@
+.rt-uno-catering {
+    position: relative;
+    width: 100%;
+    padding: 7rem 0 14rem 0;
+    background-color: #000;
+    @include background(center, center, cover, no-repeat);
+    background-attachment: fixed;
+    overflow: hidden;
+    z-index: 1;
+
+    .top-curve {
+        height: 30px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+
+        svg {
+            display: block;
+            height: 30px;
+            width: 100%;
+            path {
+                display: block;
+                height: 30px;
+                width: 100%;
+            }
+        }
+    }
+
+    .catering-content {
+        width: 50%;
+        margin: 0 auto;
+        color: $white;
+        text-align: center;
+
+        a.button {
+            //@include button($main-color, $fz, .375rem, 1.5rem, map-get($trans, 150), map-get($bdr, 3));
+            background-color: $main-color;
+            color: $white;
+
+            &:hover {
+                background-color: darken($main-color, 7%);
+            }
+
+            &::after {
+                display: inline-block;
+                position: relative;
+                content: '';
+                width: 18px;
+                height: 18px;
+                margin-left: 1.5rem;
+                bottom: -4px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                background-image: url(../../images/catering_btn_icon.svg);
+            }
+        }
+    }
+
+    .bottom-image {
+        position: absolute;
+        bottom: -350px;
+        left: 0;
+        width: 100%;
+        height: 371px;
+        @include background(left, bottom, auto, repeat-x);
+    }
+}
