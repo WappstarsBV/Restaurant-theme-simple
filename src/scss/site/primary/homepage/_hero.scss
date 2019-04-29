@@ -1,5 +1,7 @@
 .rt-uno-hero {
     width: 100%;
+    position: relative;
+    z-index: 5;
 
     > div {
         position: relative;

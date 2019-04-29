@@ -2,6 +2,7 @@
     width: 100%;
     padding: 15rem 0;
     z-index: 2;
+    background-color: $color__background-screen;
 
     .delivery-content {
         position: relative;
@@ -9,7 +10,7 @@
         margin: 0 auto;
         padding: 2rem;
         border-radius: map-get( $bdr, 3 );
-        background-color: lighten($color__background-screen, 2%);
+        background-color: $white;
         text-align: center;
 
         h2 {
