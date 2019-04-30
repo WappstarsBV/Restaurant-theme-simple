@@ -1,7 +1,7 @@
 <?php
 /**
- * @package HeadLabNeo
- * @subpackage 123 Steigerhout
+ * @package _s
+ * @subpackage RT Uno
  * Template Name: Homepage
  */
 ?>

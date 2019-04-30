@@ -1,0 +1,31 @@
+.rt-uno-diensten-header {
+    width: 100%;
+
+    .diensten-header {
+        height:500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        .diensten-header-content {
+            width: 60%;
+            float: left;
+            
+            h1 {
+                font-size: 38px;
+            }
+    
+            p {
+                font-size: 18px;
+                font-style: italic;
+            }
+        }
+    
+        .diensten-header-image {
+            width: 40%;
+            height: 100%;
+            float: right;
+            @include background(center, center, contain, no-repeat);
+        }
+    }    
+}

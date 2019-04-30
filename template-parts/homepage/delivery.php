@@ -11,10 +11,6 @@
             if($knop_1_ab && $link_1_ab) {
                 echo '<a href="'. $link_1_ab .'" class="button">'. $knop_1_ab .'</a>';
             }
-
-            if($tekst_2_ab && $link_2_ab) {
-                echo '<a href="'. $link_2_ab .'" class="button">'. $tekst_2_ab .'</a>';
-            }
             ?>
 
             <?php if($aafbelding_2_ab) { ?>

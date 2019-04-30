@@ -32,16 +32,33 @@ window.addEventListener('scroll', (event) => {
     const topNewsImage = document.querySelector('.na-top-image');
     const bottomNewsImage = document.querySelector('.na-bottom-image');
 
+    // Get all services/diensten
+    const diensten = document.querySelectorAll('.dienst');
+
+    console.log(topNewsImage);
     // Apply parallax to elements
-    imageOne.style.bottom = (scrolled * 0.18) + 'px';
-    imageTwo.style.top = (scrolled * 0.1) + 'px';
-    cateringSpices.style.bottom = calcBottomSpices;
-
-    if(isScrolledIntoView(topNewsImage)) {
-        topNewsImage.classList.add('na-top-image-visible');
+    if( imageOne != null || imageTwo != null || cateringSpices != null) {
+        imageOne.style.bottom = (scrolled * 0.18) + 'px';
+        imageTwo.style.top = (scrolled * 0.1) + 'px';
+        cateringSpices.style.bottom = calcBottomSpices;
     }
 
-    if(isScrolledIntoView(bottomNewsImage)) {
-        bottomNewsImage.classList.add('na-bottom-image-visible');
+    if(topNewsImage != null || bottomNewsImage != null) {
+        if(isScrolledIntoView(topNewsImage)) {
+            topNewsImage.classList.add('na-top-image-visible');
+        }
+    
+        if(isScrolledIntoView(bottomNewsImage)) {
+            bottomNewsImage.classList.add('na-bottom-image-visible');
+        }
     }
-});
+
+    // Add class to each of services/diensten if it is scrolled into view
+    if(diensten.length > 0) {
+        diensten.forEach((dienst) => {
+            if(isScrolledIntoView(dienst)) {
+                dienst.classList.add('dienst-w-shadow');
+            }
+        });
+    }
+}); //end of scroll event listener
