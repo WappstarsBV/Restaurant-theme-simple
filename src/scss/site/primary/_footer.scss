@@ -9,7 +9,9 @@
     }
 
     .legals-menu {
+        position: relative;
         margin-top: -16px;
+        z-index: 2;
 
         a {
             display: inline-block;

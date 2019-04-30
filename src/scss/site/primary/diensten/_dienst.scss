@@ -39,6 +39,7 @@
             padding: 7rem 4rem;
             margin-bottom: 4rem;
             background-color: $white;
+            border-radius: map-get($bdr, 2);
             overflow: hidden;
             transition: map-get($trans, 450);
 
@@ -72,6 +73,27 @@
             &:last-of-type {
                 margin-bottom: 0;
             }
+        }
+    }
+
+    .bottom-curve {
+        height: 30px;
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+        z-index: 2;
+
+        svg {
+            display: block;
+            height: 30px;
+            width: 100%;
+        }
+            
+        .bottom-path {
+            display: block;
+            height: 30px;
+            width: 100%;
+            fill: $main-color !important;
         }
     }
 }

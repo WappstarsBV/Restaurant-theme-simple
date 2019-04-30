@@ -23,4 +23,7 @@
         }
         ?>
     </div><!-- /.diensten-content -->
+    <div class="bottom-curve">
+    <?php include ( get_stylesheet_directory() . '/images/white-curve-reflect.svg' ); ?>
+    </div>
 </div><!-- /.rt-uno-diensten-dienst -->
