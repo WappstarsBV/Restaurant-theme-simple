@@ -19,4 +19,6 @@ foreach ( $option_fields as $key => $value ) {
 
 <?php include ( get_stylesheet_directory() . '/template-parts/diensten/dienst.php' ); ?>
 
+<?php include ( get_stylesheet_directory() . '/template-parts/modules/cta.php' ); ?>
+
 <?php get_footer(); ?>

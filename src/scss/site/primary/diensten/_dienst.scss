@@ -33,7 +33,8 @@
     }
 
     .diensten-content {
-    
+        position: relative;
+
         .dienst {
             position: relative;
             padding: 7rem 4rem;
@@ -73,6 +74,20 @@
             &:last-of-type {
                 margin-bottom: 0;
             }
+        }
+
+        .diensten-image-top {
+            position: absolute;
+            top: 0;
+            left: -300px;
+            @include background(center, center, contain, no-repeat);
+        }
+
+        .diensten-image-bottom {
+            position: absolute;
+            bottom: 0;
+            right: -300px;
+            @include background(center, center, contain, no-repeat);
         }
     }
 

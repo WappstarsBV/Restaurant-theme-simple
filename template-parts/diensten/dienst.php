@@ -2,7 +2,13 @@
     <div class="top-curve">
     <?php include ( get_stylesheet_directory() . '/images/white-curve.svg' ); ?>
     </div><!-- /.top-curve -->
+
+    <?php if($items_diensten) { ?>
     <div class="diensten-content container">
+
+        <div class="diensten-image-top" id="dienst-top" style="background-image: url(<?php echo $afbeelding_1_diensten['url']; ?>); width: <?php echo $afbeelding_1_diensten['width']?>px; height: <?php echo $afbeelding_1_diensten['height']?>px;"></div><!-- /.diensten-image-top -->
+
+        <div class="diensten-image-bottom" id="dienst-bottom" style="background-image: url(<?php echo $afbeelding_2_diensten['url']; ?>); width: <?php echo $afbeelding_2_diensten['width']?>px; height: <?php echo $afbeelding_2_diensten['height']?>px"></div><!-- /.diensten-image-bottom -->
         <?php 
         foreach($items_diensten as $dienst) {
             //var_dump($dienst);
@@ -23,6 +29,8 @@
         }
         ?>
     </div><!-- /.diensten-content -->
+    <?php } ?>
+
     <div class="bottom-curve">
     <?php include ( get_stylesheet_directory() . '/images/white-curve-reflect.svg' ); ?>
     </div>

@@ -35,7 +35,11 @@ window.addEventListener('scroll', (event) => {
     // Get all services/diensten
     const diensten = document.querySelectorAll('.dienst');
 
-    console.log(topNewsImage);
+    //Get parallax images
+    const dienstImageTop = document.getElementById('dienst-top');
+    const dienstImageBottom = document.getElementById('dienst-bottom');
+    
+
     // Apply parallax to elements
     if( imageOne != null || imageTwo != null || cateringSpices != null) {
         imageOne.style.bottom = (scrolled * 0.18) + 'px';
@@ -61,4 +65,10 @@ window.addEventListener('scroll', (event) => {
             }
         });
     }
+
+    if(dienstImageTop != null || dienstImageBottom != null) {
+        dienstImageTop.style.top = (scrolled * 0.15) + 'px';
+        dienstImageBottom.style.bottom = (scrolled * 0.1) + 'px';  
+    }
+
 }); //end of scroll event listener
