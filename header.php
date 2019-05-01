@@ -60,7 +60,7 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
-	<?php (is_front_page() || is_page_template( 'template-diensten.php' )) ? $container = 'container-fluid' : $container = 'container'; ?>
+	<?php (is_front_page() || is_page_template( 'template-diensten.php' ) || is_page_template( 'template-overons.php' )) ? $container = 'container-fluid' : $container = 'container'; ?>
 
 	<div class="<?php echo $container;?>">
 		<div class="row">

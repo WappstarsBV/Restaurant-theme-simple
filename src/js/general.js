@@ -1,5 +1,9 @@
+// jQuery stuff below
+
 (function($) {
-    $(window).load(() => {
-        console.log('jquery works');
-    });
+    
+    
+    $( '.gallery-image' ).swipebox();
+
+
 })(jQuery);

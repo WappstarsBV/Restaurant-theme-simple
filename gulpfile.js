@@ -48,6 +48,8 @@ var config = {
         return [
             // Bootstrap
             this.nodeDir + '/bootstrap/scss',
+            // Swipebox
+            this.nodeDir + '/swipebox/scss',
         ]
     }
 };

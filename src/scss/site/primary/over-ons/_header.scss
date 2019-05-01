@@ -1,0 +1,52 @@
+.rt-uno-over-header {
+    position: relative;
+    width: 100%;
+    padding: 7rem 0;
+    background-color: lighten($color__background-screen, 4%);
+
+    .top-curve {
+        height: 30px;
+        width: 100%;
+        position: absolute;
+        top: -1px;
+        z-index: 2;
+
+        svg {
+            display: block;
+            height: 30px;
+            width: 100%;
+            path {
+                display: block;
+                height: 30px;
+                width: 100%;
+                fill: $white;
+            }
+        }
+    }
+
+    .over-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .over-header-content {
+            width: 70%;
+            text-align: center;
+            padding: 2rem;
+            border-radius: map-get( $bdr, 2 );
+            background-color: $white;
+
+            
+            h1 {
+                font-size: 38px;
+                margin-top: 0;
+            }
+    
+            p {
+                font-size: 18px;
+                font-style: italic;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

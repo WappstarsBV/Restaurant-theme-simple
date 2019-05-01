@@ -1,0 +1,64 @@
+.rt-uno-over-gallery {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    .top-curve {
+        height: 30px;
+        width: 100%;
+        position: absolute;
+        top: -1px;
+        z-index: 2;
+
+        svg {
+            display: block;
+            height: 30px;
+            width: 100%;
+            path {
+                display: block;
+                height: 30px;
+                width: 100%;
+                fill: lighten($color__background-screen, 4%);
+            }
+        }
+    }
+
+    a.gallery-image {
+        display: block;
+        width: 25%;
+        height: 420px;
+        float: left;
+        overflow: hidden;
+
+        img {
+            transition: map-get( $trans, 350 );
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .bottom-curve {
+        height: 30px;
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+        z-index: 2;
+
+        svg {
+            display: block;
+            height: 30px;
+            width: 100%;
+        }
+            
+        .bottom-path {
+            display: block;
+            height: 30px;
+            width: 100%;
+            fill: $main-color !important;
+        }
+    }
+}
