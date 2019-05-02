@@ -86,6 +86,8 @@ window.addEventListener('scroll', (event) => {
 
 // Map title positioning
 const mapTitle = document.querySelector('.map-title');
-let mapTitleWidth = mapTitle.offsetWidth;
-mapTitle.style.left ='calc(50% - ' + mapTitleWidth / 2 + 'px)';
+if(mapTitle != null) {
+    let mapTitleWidth = mapTitle.offsetWidth;
+    mapTitle.style.left ='calc(50% - ' + mapTitleWidth / 2 + 'px)';
+}
 

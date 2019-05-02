@@ -18,7 +18,7 @@ foreach($gallery as $item) {
     ';
 }
 ?>
-<div class="bottom-curve">
-<?php include ( get_stylesheet_directory() . '/images/white-curve-reflect.svg' ); ?>
-</div>
+    <div class="bottom-curve">
+    <?php include ( get_stylesheet_directory() . '/images/white-curve-reflect.svg' ); ?>
+    </div>
 </div><!-- /.rt-uno-over-gallery -->

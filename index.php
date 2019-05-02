@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="nieuws-acties-area">
 		<main id="main" class="site-main">
 
 		<?php
@@ -23,26 +23,47 @@ get_header();
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
+				<div class="container">
 				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					<h1 class="nieuws-acties-title"><?php single_post_title(); ?></h1>
 				</header>
+				</div><!-- /.container -->
 				<?php
 			endif;
+
+			echo '<div class="nieuws-acties-posts">';
+
+			
+			echo '<div class="top-curve">';
+			include ( get_stylesheet_directory() . '/images/white-curve.svg' );
+			echo '</div><!-- /.top-curve -->';
+
+			echo '<div class="container">';
 
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				
+				get_template_part( 'template-parts/content', 'index' );
 
 			endwhile;
 
-			the_posts_navigation();
+			echo
+			'
+			<div id="load-more">
+				<a href="#">Laad meer nieuws/acties</a>
+			</div>
+			';
+
+			echo '</div>';
+
+			echo '<div class="bottom-curve">';
+			include ( get_stylesheet_directory() . '/images/white-curve-reflect.svg' );
+			echo '</div><!-- /.bottom-curve -->';
+
+			echo '</div>';
+
+			//the_posts_navigation();
 
 		else :
 
@@ -51,9 +72,10 @@ get_header();
 		endif;
 		?>
 
+		<?php include ( get_stylesheet_directory() . '/template-parts/modules/cta.php' ); ?>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

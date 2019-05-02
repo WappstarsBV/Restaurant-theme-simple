@@ -196,3 +196,12 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
   }
+
+  /**
+ * Get rid of tags on posts.
+ */
+function rt_uno_unregister_tags() {
+    unregister_taxonomy_for_object_type( 'post_tag', 'post' );
+    unregister_taxonomy_for_object_type( 'category', 'post' );
+}
+add_action( 'init', 'rt_uno_unregister_tags' );

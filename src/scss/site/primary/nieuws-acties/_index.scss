@@ -1,0 +1,157 @@
+.nieuws-acties-area {
+    width: 100%;
+
+    .nieuws-acties-title {
+        font-size: 46px;
+        text-align: center;
+    }
+
+    .nieuws-acties-posts {
+        position: relative;
+        padding: 7rem 0;
+        background:
+        radial-gradient($main-color 3px, transparent 4px),
+        radial-gradient($main-color 3px, transparent 4px),
+        linear-gradient(lighten($color__background-screen, 4%) 4px, transparent 0),
+        linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+        linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+        lighten($color__background-screen, 4%);
+        background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+        background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+        background-attachment: fixed;
+
+        .top-curve {
+            height: 30px;
+            width: 100%;
+            position: absolute;
+            top: -1px;
+
+            svg {
+                display: block;
+                height: 30px;
+                width: 100%;
+                path {
+                    display: block;
+                    height: 30px;
+                    width: 100%;
+                    fill: $white;
+                }
+            }
+        }
+
+        .post {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            height: 180px;
+            margin: 0 auto 3rem auto;
+            background-color: $white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+            &:hover {
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            }
+
+            img {
+                width: 30%;
+                height: 100%;
+                object-fit: cover;
+                float: left;
+            }
+
+            span {
+                position: absolute;
+                display: inline-block;
+                font-size: 12px;
+                color: $color__border-abbr;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .post-content {
+                width: 70%;
+                float: right;
+                padding: 1rem 1rem 1rem 2rem;
+
+                h2 {
+                    font-size: 26px;
+                    color: $black;
+                }
+
+                p {
+                    color: $black;
+                    margin-bottom: 0;
+                }
+
+
+            }
+        }
+
+        #load-more {
+            margin-top: 4rem;
+            text-align: center;
+
+            a {
+                display: inline-block;
+                padding: .5rem 1rem;
+                border-radius: map-get( $bdr, 2 );
+                background-color: $black;
+                color: $white;
+                font-size: 18px;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                transition: map-get( $trans, 250 );
+
+                &::after {
+                    position: relative;
+                    display: inline-block;
+                    width: 0;
+                    height: 25px;
+                    margin-top: -7px;
+                    content: '';
+                    background-image: url(../../images/loader.svg);
+                    @include background(center, center, contain, no-repeat);
+                    bottom: -7px;
+                    opacity: 0;
+                   transition: all map-get( $trans, 250 );
+                }
+
+                &.loading {
+                    &::after {
+                        width: 25px;
+                        margin-left: 1rem;
+                        opacity: 1;
+                    }
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    background-color: darken($main-color, 7%);
+                }
+            }
+        }
+
+        .bottom-curve {
+            height: 30px;
+            width: 100%;
+            position: absolute;
+            bottom: -1px;
+            z-index: 2;
+    
+            svg {
+                display: block;
+                height: 30px;
+                width: 100%;
+            }
+                
+            .bottom-path {
+                display: block;
+                height: 30px;
+                width: 100%;
+                fill: $main-color !important;
+            }
+        }
+    }
+}
