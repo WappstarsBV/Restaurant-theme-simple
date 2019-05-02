@@ -38,6 +38,9 @@ window.addEventListener('scroll', (event) => {
     //Get parallax images
     const dienstImageTop = document.getElementById('dienst-top');
     const dienstImageBottom = document.getElementById('dienst-bottom');
+
+    // Get all contact shadow elements
+    const contact = document.querySelectorAll('div.contact-form, div.openingstijden, div.contactgegevens');
     
 
     // Apply parallax to elements
@@ -71,4 +74,18 @@ window.addEventListener('scroll', (event) => {
         dienstImageBottom.style.bottom = (scrolled * 0.1) + 'px';  
     }
 
+    if(contact != null) {
+        contact.forEach((item) => {
+            if(isScrolledIntoView(item)) {
+                item.classList.add('form-el-shadow');
+            }
+        });
+    }
+
 }); //end of scroll event listener
+
+// Map title positioning
+const mapTitle = document.querySelector('.map-title');
+let mapTitleWidth = mapTitle.offsetWidth;
+mapTitle.style.left ='calc(50% - ' + mapTitleWidth / 2 + 'px)';
+

@@ -1,0 +1,50 @@
+.rt-uno-contact-header {
+    width: 100%;
+    padding: 7rem 0 7rem 0;
+
+    .contact-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .contact-header-content {
+            position: relative;
+            width: 70%;
+            text-align: center;
+            padding: 2rem;
+            border-radius: map-get( $bdr, 2 );
+            background-color: lighten($color__background-screen, 4%);
+         
+            h1 {
+                font-size: 38px;
+                margin-top: 0;
+            }
+    
+            p {
+                font-size: 18px;
+                font-style: italic;
+                margin-bottom: 0;
+            }
+
+            .top-header-image {
+                position: absolute;
+                width: 320px;
+                height: 320px;
+                top: -160px;
+                right: -160px;
+                @include background(center, center, contain, no-repeat);
+                z-index: -1;
+            }
+
+            .bottom-header-image {
+                position: absolute;
+                width: 320px;
+                height: 320px;
+                bottom: -160px;
+                left: -160px;
+                @include background(center, center, contain, no-repeat);
+                z-index: -1;
+            }
+        }
+    }
+}

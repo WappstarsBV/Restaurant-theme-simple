@@ -107,12 +107,14 @@ gulp.task('scripts', function(done) { // Define callback for explicit finish - h
  * Browser sync task
  */
 gulp.task('browser-sync', function(done) {
-    browserSync.init(browserSyncOption.files, browserSyncOption.config);
-	gulp.watch(browserSyncOption.files).on('change', function() {
-        setTimeout(function() {
-            browserSync.reload();
-        }, 1000);
-    });
+    
+    setTimeout(function() {
+        browserSync.init(browserSyncOption.files, browserSyncOption.config);
+        gulp.watch(browserSyncOption.files).on('change', function() {
+                browserSync.reload();
+        });
+    }, 1000);
+    
     done();
 });
 
