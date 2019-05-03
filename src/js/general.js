@@ -19,7 +19,7 @@
 		let new_page = page+1;
         const posts = link.parent().parent().find('div.response-container');
         
-        console.log(page);
+        //console.log(page);
 
 		link.addClass('loading');
 
@@ -49,6 +49,25 @@
 	});
 	/////////////////////////////////////////////////////////////////////////////
 	// Ajax load more shop news //////////////////////////////////////////////////
+
+
+	// Social networks share /////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////////////
+    $("#sharing-is-caring").jsSocials({
+        showCount: "inside",
+        showLabel: false,
+        shareIn: "popup",
+        shares: [
+        "email", 
+        { share: "facebook", logo: "fa fa-facebook" }, 
+        { share: "twitter", logo: "fa fa-twitter" }, 
+        //{ share: "googleplus", logo: "fab fa-google" }, 
+        { share: "linkedin", logo: "fa fa-linkedin" },
+        { share: "whatsapp", logo: "fa fa-whatsapp" },
+        ]
+    });
+    // Social networks share end /////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////////////
 
 
 })(jQuery);

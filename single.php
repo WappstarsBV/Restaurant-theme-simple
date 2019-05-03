@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="nieuws-acties-single-area">
 		<main id="main" class="site-main">
 
 		<?php
@@ -19,14 +19,16 @@ get_header();
 
 			get_template_part( 'template-parts/content', 'single' );
 
-			the_post_navigation();
+			//the_post_navigation();
 
 		endwhile; // End of the loop.
 		?>
+
+		<?php include ( get_stylesheet_directory() . '/template-parts/modules/cta.php' ); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();

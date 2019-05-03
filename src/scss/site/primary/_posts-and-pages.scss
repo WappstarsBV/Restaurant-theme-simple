@@ -25,3 +25,19 @@
 a.button {
 	@include button($main-color, $fz, .375rem, 1.5rem, map-get($trans, 150), map-get($bdr, 3));
 }
+
+#sharing-is-caring {
+	.jssocials-share {
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		margin-right: 5px;
+	}
+	a {
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		border-radius: map-get( $bdr, 2 );
+		text-align: center;
+	}
+}

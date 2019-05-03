@@ -50,6 +50,10 @@ var config = {
             this.nodeDir + '/bootstrap/scss',
             // Swipebox
             this.nodeDir + '/swipebox/scss',
+            // jsSocials
+            this.nodeDir + '/jssocials/dist',
+            // Font Awesome
+            this.nodeDir + '/font-awesome/scss',
         ]
     }
 };

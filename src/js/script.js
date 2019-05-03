@@ -31,6 +31,7 @@ window.addEventListener('scroll', (event) => {
     const cateringSpices = document.getElementById('catering-spices');
     const topNewsImage = document.querySelector('.na-top-image');
     const bottomNewsImage = document.querySelector('.na-bottom-image');
+    const postContent = document.querySelector('.post-content');
 
     // Get all services/diensten
     const diensten = document.querySelectorAll('.dienst');
@@ -80,6 +81,10 @@ window.addEventListener('scroll', (event) => {
                 item.classList.add('form-el-shadow');
             }
         });
+    }
+
+    if(isScrolledIntoView(postContent)) {
+        postContent.classList.add('post-content-w-shadow');
     }
 
 }); //end of scroll event listener
