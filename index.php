@@ -38,7 +38,7 @@ get_header();
 			include ( get_stylesheet_directory() . '/images/white-curve.svg' );
 			echo '</div><!-- /.top-curve -->';
 
-			echo '<div class="container">';
+			echo '<div class="container response-container">';
 
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -48,20 +48,20 @@ get_header();
 
 			endwhile;
 
+			echo '</div><!-- /.response-container -->';
+
 			echo
 			'
 			<div id="load-more">
-				<a href="#">Laad meer nieuws/acties</a>
+				<a href="#" id="load-more-link" data-page="1" data-url="'. admin_url('admin-ajax.php') .'">Laad meer nieuws/acties</a>
 			</div>
 			';
-
-			echo '</div>';
 
 			echo '<div class="bottom-curve">';
 			include ( get_stylesheet_directory() . '/images/white-curve-reflect.svg' );
 			echo '</div><!-- /.bottom-curve -->';
 
-			echo '</div>';
+			echo '</div><!-- /.nieuws-acties-posts -->';
 
 			//the_posts_navigation();
 
@@ -76,6 +76,5 @@ get_header();
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php
 get_footer();

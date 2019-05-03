@@ -126,3 +126,8 @@ require get_template_directory() . '/inc/extras.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+/**
+ * Ajax.
+ */
+require get_template_directory() . '/inc/ajax.php';
+
