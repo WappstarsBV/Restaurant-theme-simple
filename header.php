@@ -59,8 +59,18 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
+	<?php
+	$templates = array(
+		'template-homepage.php',
+		'template-diensten.php',
+		'template-overons.php',
+		'template-contact.php',
+		'template-legals.php'
+	);
+	?>
+
 	<div id="content" class="site-content">
-	<?php (is_front_page() || is_page_template( 'template-diensten.php' ) || is_page_template( 'template-overons.php' ) || is_page_template( 'template-contact.php' ) || is_home() || is_single()) ? $container = 'container-fluid' : $container = 'container'; ?>
+	<?php (is_page_template( $templates ) || is_home() || is_single()) ? $container = 'container-fluid' : $container = 'container'; ?>
 
 	<div class="<?php echo $container;?>">
 		<div class="row">

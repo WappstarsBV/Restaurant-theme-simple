@@ -9,10 +9,9 @@ function isScrolledIntoView(el) {
     let elemTop = rect.top;
     let elemBottom = rect.bottom;
 
-    // Only completely visible elements return true:
-    let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
-    // Partially visible elements return true:
-    //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+    // partially visible elements return true:
+    let isVisible = (elemTop >= 0 && window.innerHeight >= elemBottom);
+    
     return isVisible;
 }
 
@@ -83,7 +82,7 @@ window.addEventListener('scroll', (event) => {
         });
     }
 
-    if(isScrolledIntoView(postContent)) {
+    if(postContent != null && isScrolledIntoView(postContent)) {
         postContent.classList.add('post-content-w-shadow');
     }
 
@@ -96,3 +95,17 @@ if(mapTitle != null) {
     mapTitle.style.left ='calc(50% - ' + mapTitleWidth / 2 + 'px)';
 }
 
+// share buttons
+let shareBtn = document.querySelector('.share-btn');
+//console.log(shareBtn.childNodes);
+if(shareBtn != null) {
+    document.addEventListener('click', (event) => {
+        if(event.target === shareBtn || event.target === shareBtn.childNodes[5]) {
+            shareBtn.classList.toggle('active');
+            shareBtn.nextElementSibling.classList.toggle('sharing-is-visible');
+        } else {
+            shareBtn.classList.remove('active');
+            shareBtn.nextElementSibling.classList.remove('sharing-is-visible');
+        }
+    });
+}

@@ -50,12 +50,18 @@ get_header();
 
 			echo '</div><!-- /.response-container -->';
 
+			global $post;
+
+			if( wp_count_posts('post')->publish > get_option('posts_per_page') ) {
+				
 			echo
 			'
 			<div id="load-more">
 				<a href="#" id="load-more-link" data-page="1" data-url="'. admin_url('admin-ajax.php') .'">Laad meer nieuws/acties</a>
 			</div>
 			';
+
+			} // END if
 
 			echo '<div class="bottom-curve">';
 			include ( get_stylesheet_directory() . '/images/white-curve-reflect.svg' );

@@ -62,7 +62,7 @@
         { share: "facebook", logo: "fa fa-facebook" }, 
         { share: "twitter", logo: "fa fa-twitter" }, 
         //{ share: "googleplus", logo: "fab fa-google" }, 
-        { share: "linkedin", logo: "fa fa-linkedin" },
+        // { share: "linkedin", logo: "fa fa-linkedin" },
         { share: "whatsapp", logo: "fa fa-whatsapp" },
         ]
     });

@@ -224,3 +224,10 @@
         }
     }
 }
+
+div.wpcf7 {
+    .ajax-loader {
+        background-image: url(../../images/loading-cf.svg);
+        background-size: contain;
+    }
+}
