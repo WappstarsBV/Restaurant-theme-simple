@@ -34,6 +34,7 @@
 			</div><!-- /.logo -->
 
 			<div class="menu-and-contact">
+				<span class="close-nav">&times;</span><!-- /.close-nav -->
 				<div class="contact">
 					<?php 
 					$tel = get_field('telefoon_general', 'option');
@@ -49,14 +50,36 @@
 					?>
 				</div><!-- /.contact -->
 				<?php (has_nav_menu( 'primary' )) ? wp_nav_menu( array('theme_location' => 'primary') ) : ''; ?>
+				<div class="social-networks">
+				<?php
+
+					// check if the repeater field has rows of data
+					if( have_rows('social_networks', 'options') ):
+
+						// loop through the rows of data
+						while ( have_rows('social_networks', 'options') ) : the_row();
+						$icon = get_sub_field('network_icon');
+						$link = get_sub_field('network_url');
+						echo '<a href="'. $link .'" target="_blank">'. $icon .'</a>';
+						endwhile;
+
+					else :
+
+						// no rows found
+
+					endif;
+
+					?>
+				</div><!-- /.social-networks -->
 			</div><!-- /.menu-and-contact -->
+		
+			<div class="mobile-navigation">
+					<div class="hamburger"></div><!-- /.hamburger -->
+					<div class="overlay"></div><!-- /.overlay -->
+			</div><!-- /.mobile-navigation -->
 
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation container">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'rt-uno' ); ?></button>
-			
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<?php

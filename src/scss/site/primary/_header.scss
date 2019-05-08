@@ -15,9 +15,31 @@
 }
 
 .menu-and-contact {
+    position: relative;
     width: 85%;
     float: right;
     text-align: right;
+
+    .close-nav {
+        position: fixed;
+        right: -30px;
+        top: 62px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $main-color;
+        color:$white;
+        font-size: 18px;
+        font-weight: 700;
+        transition: all 400ms ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+
+        &:hover {
+            cursor: pointer;
+            user-select: none;
+        }
+    }
 
     .contact {
         padding-bottom: .375rem;
@@ -79,5 +101,185 @@
                 }
             }
         }
+    }
+
+    .social-networks {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $color__background-screen;
+        padding: .375rem .375rem .375rem .5rem;
+        z-index: 1001;
+
+        a {
+            display: inline-block;
+            font-size: 26px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.mobile-navigation {
+    position: relative;
+    display: none;
+    width: 85%;
+    float: right;
+    text-align: right;
+
+    &::after {
+        display: inline-block;
+        content: '';
+        position: absolute;
+        height: 1px;
+        background-color: $main-color;
+        top: 50%;
+        left: 30px;
+        right: 65px;
+    }
+
+    &.clicked {
+        .overlay {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    .hamburger {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin-bottom: -5px;
+        border-radius: 50%;
+        background-color: lighten($color__background-hr, 13%);
+        background-image: url('../../images/hamburger.svg');
+        @include background(center, center, 50%, no-repeat);
+        transition: all 350ms ease;
+
+        &:hover {
+            background-color: lighten($color__background-hr, 7%);
+        }
+
+
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba($black, .6);
+        z-index: 999;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 350ms ease-in-out;
+    }
+}
+
+
+/**
+* Media queries
+*/
+
+/*---------------------------------------------------------
+-- Extra Large (xl) Screen Size Media Queries - less than 1200px
+---------------------------------------------------------*/
+@include media-breakpoint-down(xl) {
+	// styles apply to extra large screen size and down
+}
+
+/*---------------------------------------------------------
+-- Large (lg) Screen Size Media Queries - less than 1200px
+---------------------------------------------------------*/
+@include media-breakpoint-down(lg) {
+	// styles apply to large screen size and up
+}
+
+/*---------------------------------------------------------
+-- Medium (md) Screen Size Media Queries - less than 992px
+---------------------------------------------------------*/
+@include media-breakpoint-down(md) {
+	.menu-and-contact {
+        position: fixed;
+        float: none;
+        text-align: left;
+        width: 300px;
+        top: 0;
+        bottom: 0;
+        right: -300px;
+        padding: 1rem 1rem 1rem 1.5rem;
+        background-color: $white;
+        overflow-y: auto;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        z-index: 1000;
+        transition: all 350ms ease-in-out;
+
+        &.menu-and-contact-visible {
+            right: 0;
+
+            .close-nav {
+                opacity: 1;
+                visibility: visible;
+                right: 285px;
+            }
+        }
+
+        .close-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact {
+            padding-bottom: 0;
+            margin-bottom: 1rem;
+        }
+
+        .menu-primary-menu-container {
+            > ul {
+                li {
+                    display: block;
+                    margin: 0 0 1rem 0;
+
+                    &:last-of-type a {
+                        padding: 5px 12px;
+                    }
+
+                    a {
+                        padding: 5px 0;
+                    }
+                }
+            }
+        }
+
+        .social-networks {
+            display: block;
+        }
+    }
+
+    .mobile-navigation {
+        display: block;
+    }
+}
+
+/*---------------------------------------------------------
+-- Small (sm) Screen Size Media Queries - less than 768px
+---------------------------------------------------------*/
+@include media-breakpoint-down(sm) {
+    .logo {
+        width: 25%;
+    }
+}
+
+/*---------------------------------------------------------
+-- Extra Small (xs) Screen Size Media Queries - less than 576px
+---------------------------------------------------------*/
+@include media-breakpoint-up(xs) {
+    .logo {
+        width: 30%;
     }
 }

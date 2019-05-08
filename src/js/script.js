@@ -98,8 +98,8 @@ if(mapTitle != null) {
 // share buttons
 let shareBtn = document.querySelector('.share-btn');
 //console.log(shareBtn.childNodes);
-if(shareBtn != null) {
-    document.addEventListener('click', (event) => {
+document.addEventListener('click', (event) => {
+    if(shareBtn != null) {
         if(event.target === shareBtn || event.target === shareBtn.childNodes[5]) {
             shareBtn.classList.toggle('active');
             shareBtn.nextElementSibling.classList.toggle('sharing-is-visible');
@@ -107,5 +107,19 @@ if(shareBtn != null) {
             shareBtn.classList.remove('active');
             shareBtn.nextElementSibling.classList.remove('sharing-is-visible');
         }
-    });
-}
+    }
+});
+
+
+const hamburger = document.querySelector('.hamburger'); console.log(hamburger);
+const menu = document.querySelector('.menu-and-contact');
+const closeMenu = document.querySelector('.close-nav');
+document.addEventListener('click', (event) => {
+    if(event.target === hamburger || event.target === hamburger.firstElementChild) {
+        menu.classList.add('menu-and-contact-visible');
+        hamburger.parentElement.classList.add('clicked');
+    } else if (event.target === closeMenu) {
+        menu.classList.remove('menu-and-contact-visible');
+        hamburger.parentElement.classList.remove('clicked');
+    }
+});

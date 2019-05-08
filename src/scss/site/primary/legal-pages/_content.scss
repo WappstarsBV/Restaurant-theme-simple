@@ -62,3 +62,43 @@
         }
     }
 }
+
+
+/**
+* Media queries
+*/
+
+/*---------------------------------------------------------
+-- Extra Large (xl) Screen Size Media Queries - less than 1200px
+---------------------------------------------------------*/
+@include media-breakpoint-down(xl) {
+	// styles apply to extra large screen size and down
+}
+
+/*---------------------------------------------------------
+-- Large (lg) Screen Size Media Queries - less than 1200px
+---------------------------------------------------------*/
+@include media-breakpoint-down(lg) {
+	// styles apply to large screen size and up
+}
+
+/*---------------------------------------------------------
+-- Medium (md) Screen Size Media Queries - less than 992px
+---------------------------------------------------------*/
+@include media-breakpoint-down(md) {
+	// styles apply to medium screen size and up
+}
+
+/*---------------------------------------------------------
+-- Small (sm) Screen Size Media Queries - less than 768px
+---------------------------------------------------------*/
+@include media-breakpoint-down(sm) {
+	// styles apply to small screen size and up
+}
+
+/*---------------------------------------------------------
+-- Extra Small (xs) Screen Size Media Queries - less than 576px
+---------------------------------------------------------*/
+@include media-breakpoint-up(xs) {
+	// styles apply to extra small screen size and up
+}
