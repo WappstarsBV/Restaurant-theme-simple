@@ -111,15 +111,17 @@ document.addEventListener('click', (event) => {
 });
 
 
-const hamburger = document.querySelector('.hamburger'); console.log(hamburger);
+const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu-and-contact');
 const closeMenu = document.querySelector('.close-nav');
 document.addEventListener('click', (event) => {
     if(event.target === hamburger || event.target === hamburger.firstElementChild) {
         menu.classList.add('menu-and-contact-visible');
         hamburger.parentElement.classList.add('clicked');
+        document.getElementsByTagName('html')[0].style.overflowY = "hidden";
     } else if (event.target === closeMenu) {
         menu.classList.remove('menu-and-contact-visible');
         hamburger.parentElement.classList.remove('clicked');
+        document.getElementsByTagName('html')[0].style.overflowY = "scroll";
     }
 });

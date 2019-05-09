@@ -8,7 +8,7 @@
             <h2><?php echo $titel_cat; ?></h2>
             <?php } ?>
             <?php if($tekst_cat) { ?>
-            <p><?php echo strip_tags($tekst_cat); ?></p>
+            <p><?php echo strip_tags($tekst_cat, '<a>'); ?></p>
             <?php } ?>
             <?php if($button_text_cat && $button_link_cat) { ?>
             <a href="<?php echo $button_link_cat; ?>" class="button"><?php echo $button_text_cat; ?></a>

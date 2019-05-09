@@ -1,5 +1,5 @@
 <div class="rt-uno-hero">
-    <div class="container">
+    <div class="container clearfix">
         <div class="hero-content">
             <div class="clearfix">
             <?php echo ($titel_hero) ? '<h1>'. strip_tags($titel_hero) .'</h1>' : ''; ?>

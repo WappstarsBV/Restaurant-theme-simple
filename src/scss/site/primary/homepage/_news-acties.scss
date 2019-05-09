@@ -112,3 +112,44 @@
         }
     }
 }
+
+/*---------------------------------------------------------
+-- Medium (md) Screen Size Media Queries - less than 992px
+---------------------------------------------------------*/
+@include media-breakpoint-down(md) {
+    .rt-uno-news-acties {
+        .news-acties-content {
+            width: 70%;
+        }
+
+        .news-acties-posts {
+            width: 85%;
+        }
+    }
+}
+
+/*---------------------------------------------------------
+-- Small (sm) Screen Size Media Queries - less than 768px
+---------------------------------------------------------*/
+@include media-breakpoint-down(sm) {
+    .rt-uno-news-acties {
+        .news-acties-content {
+            width: 85%;
+        }
+
+        .news-acties-posts {
+            width: 95%;
+        }
+    }
+}
+
+/*---------------------------------------------------------
+-- Extra Small (xs) Screen Size Media Queries - less than 576px
+---------------------------------------------------------*/
+@include media-breakpoint-down(xs) {
+    .rt-uno-news-acties {
+        .news-acties-content {
+            width: 95%;
+        }
+    }
+}

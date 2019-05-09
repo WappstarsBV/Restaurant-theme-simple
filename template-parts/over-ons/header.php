@@ -16,7 +16,7 @@ while ( have_posts() ) :
             <?php } ?>
 
             <?php the_title( '<h1>', '</h1>' ); ?>
-            <p class="over-intro"><?php echo strip_tags(get_the_content()); ?></p><!-- /.over-intro -->
+            <p class="over-intro"><?php echo strip_tags(get_the_content(), '<a>'); ?></p><!-- /.over-intro -->
         </div><!-- /.over-header-content -->
     </header><!-- .entry-header -->
 </div><!-- /.rt-uno-over-header -->

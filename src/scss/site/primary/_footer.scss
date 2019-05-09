@@ -53,3 +53,27 @@
         }
     }
 }
+
+
+
+/*---------------------------------------------------------
+-- Extra Small (xs) Screen Size Media Queries - less than 576px
+---------------------------------------------------------*/
+@include media-breakpoint-down(xs) {
+    .site-footer {
+        .site-info {
+            > div {
+                &:first-of-type {
+                    width: 100%;
+                    float: none;
+                    margin-bottom: 1rem;
+                }
+                &:last-of-type {
+                    width: 100%;
+                    float: none;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

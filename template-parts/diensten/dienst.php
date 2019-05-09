@@ -18,7 +18,7 @@
             <div class="dienst">
                 <div class="dienst-content">
                     <h2>'. $dienst['titel'] .'</h2>
-                    <p>'. strip_tags($dienst['tekst']) .'</p>
+                    <p>'. strip_tags($dienst['tekst'], '<a>') .'</p>
                     <a href="'. $dienst['knop_link'] .'" class="button">'. $dienst['knop_tekst'] .'</a>
                 </div><!-- /.dienst-content -->
                 <div class="dienst-image" style="background-image: url('. $dienst['afbeelding']['url'] .')">

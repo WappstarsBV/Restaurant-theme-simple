@@ -15,7 +15,7 @@ while ( have_posts() ) :
             <div class="bottom-header-image" style="background-image: url(<?php echo $imageTwo; ?>)"></div><!-- /.top-header-image -->
             <?php } ?>
             <?php the_title( '<h1>', '</h1>' ); ?>
-            <p class="contact-intro"><?php echo strip_tags(get_the_content()); ?></p><!-- /.contact-intro -->
+            <p class="contact-intro"><?php echo strip_tags(get_the_content(), '<a>'); ?></p><!-- /.contact-intro -->
         </div><!-- /.contact-header-content -->
     </header><!-- .contact-header -->
 </div><!-- /.rt-uno-contact-header -->

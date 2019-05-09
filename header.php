@@ -50,18 +50,20 @@
 					?>
 				</div><!-- /.contact -->
 				<?php (has_nav_menu( 'primary' )) ? wp_nav_menu( array('theme_location' => 'primary') ) : ''; ?>
-				<div class="social-networks">
+				
 				<?php
 
 					// check if the repeater field has rows of data
 					if( have_rows('social_networks', 'options') ):
-
+						echo '<div class="social-networks">';
 						// loop through the rows of data
 						while ( have_rows('social_networks', 'options') ) : the_row();
 						$icon = get_sub_field('network_icon');
 						$link = get_sub_field('network_url');
 						echo '<a href="'. $link .'" target="_blank">'. $icon .'</a>';
 						endwhile;
+
+						echo '</div><!-- /.social-networks -->';
 
 					else :
 
@@ -70,7 +72,6 @@
 					endif;
 
 					?>
-				</div><!-- /.social-networks -->
 			</div><!-- /.menu-and-contact -->
 		
 			<div class="mobile-navigation">

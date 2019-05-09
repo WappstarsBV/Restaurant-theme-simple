@@ -5,7 +5,7 @@ while ( have_posts() ) :
     <header class="diensten-header container">
         <div class="diensten-header-content">
         <?php the_title( '<h1>', '</h1>' ); ?>
-        <p class="diensten-intro"><?php echo strip_tags(get_the_content()); ?></p><!-- /.diensten-intro -->
+        <p class="diensten-intro"><?php echo strip_tags(get_the_content(), '<p>, <a>'); ?></p><!-- /.diensten-intro -->
         </div><!-- /.diensten-header-content -->
 
         <?php if(has_post_thumbnail()) {

@@ -6,7 +6,7 @@
             <?php } ?>
 
             <?php echo ($titel_ab) ? '<h2>' . strip_tags($titel_ab) . '</h2>' : ''; ?>
-            <?php echo ($tekst_ab) ? '<p>' . strip_tags($tekst_ab) . '</p>' : ''; ?>
+            <?php echo ($tekst_ab) ? '<p>' . strip_tags($tekst_ab, '<a>') . '</p>' : ''; ?>
             <?php 
             if($knop_1_ab && $link_1_ab) {
                 echo '<a href="'. $link_1_ab .'" class="button">'. $knop_1_ab .'</a>';
