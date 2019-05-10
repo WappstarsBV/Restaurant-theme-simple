@@ -62,3 +62,41 @@
         }
     }
 }
+
+
+
+
+/*---------------------------------------------------------
+-- Medium (md) Screen Size Media Queries - less than 992px
+---------------------------------------------------------*/
+@include media-breakpoint-down(md) {
+	.rt-uno-over-gallery {
+        a.gallery-image {
+            width: 50%;
+        }
+    }
+}
+
+
+/*---------------------------------------------------------
+-- Small (sm) Screen Size Media Queries - less than 768px
+---------------------------------------------------------*/
+@include media-breakpoint-down(sm) {
+	.rt-uno-over-gallery {
+        a.gallery-image {
+            height: 320px;
+        }
+    }
+}
+
+/*---------------------------------------------------------
+-- Extra Small (xs) Screen Size Media Queries - less than 576px
+---------------------------------------------------------*/
+@include media-breakpoint-down(xs) {
+	.rt-uno-over-gallery {
+        a.gallery-image {
+            width: 100%;
+            float: none;
+        }
+    }
+}
