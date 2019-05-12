@@ -120,6 +120,8 @@
 ---------------------------------------------------------*/
 @include media-breakpoint-down(md) {
     .rt-uno-diensten-dienst {
+        padding-top: 10rem;
+
         .diensten-content {
             .dienst {
                 padding: 10rem 3rem 3rem 3rem;

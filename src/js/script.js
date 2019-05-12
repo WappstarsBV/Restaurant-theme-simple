@@ -125,3 +125,17 @@ document.addEventListener('click', (event) => {
         document.getElementsByTagName('html')[0].style.overflowY = "scroll";
     }
 });
+
+
+window.addEventListener('load', () => {
+    // get screen width
+    const width = screen.width;
+
+    // get elements
+    const dienstImage = document.querySelector('.diensten-header-image');
+
+    // add classes on load
+    if(width <= 992 && dienstImage != null) {
+        dienstImage.classList.add('diensten-header-image-visible');
+    }
+});
