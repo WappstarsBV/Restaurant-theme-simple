@@ -32,6 +32,9 @@
 
         img {
             transition: map-get( $trans, 350 );
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
 
         &:hover {
