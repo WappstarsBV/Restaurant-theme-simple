@@ -1,0 +1,48 @@
+.area-404 {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    a {
+        color: $main-color;
+
+        &.go-home-btn {
+            display: inline-block;
+            padding: .375rem 2rem;
+            border-radius: map-get( $bdr, 2 );
+            color: $white;
+            background-color: $main-color;
+            transition: map-get( $trans, 250 );
+
+            &:hover {
+                background-color: darken($main-color, 7%);
+                text-decoration: none;
+            }
+        }
+    }
+
+    .bottom-curve {
+        height: 30px;
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+        z-index: 2;
+
+        svg {
+            display: block;
+            height: 30px;
+            width: 100%;
+        }
+            
+        .bottom-path {
+            display: block;
+            height: 30px;
+            width: 100%;
+            fill: $main-color !important;
+        }
+    }
+}

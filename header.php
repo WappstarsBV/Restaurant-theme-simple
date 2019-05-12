@@ -94,7 +94,7 @@
 	?>
 
 	<div id="content" class="site-content">
-	<?php (is_page_template( $templates ) || is_home() || is_single()) ? $container = 'container-fluid' : $container = 'container'; ?>
+	<?php (is_page_template( $templates ) || is_home() || is_single() || is_404()) ? $container = 'container-fluid' : $container = 'container'; ?>
 
 	<div class="<?php echo $container;?>">
 		<div class="row">
