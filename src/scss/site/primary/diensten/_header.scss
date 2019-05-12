@@ -29,3 +29,32 @@
         }
     }    
 }
+
+
+/*---------------------------------------------------------
+-- Medium (md) Screen Size Media Queries - less than 992px
+---------------------------------------------------------*/
+@include media-breakpoint-down(md) {
+    .rt-uno-diensten-header {
+        position: relative;
+
+        .diensten-header {
+            display: block;
+
+            .diensten-header-content {
+                width: 80%;
+                float: none;
+                margin: 0 auto;
+            }
+
+            .diensten-header-image {
+                position: absolute;
+                width: 260px;
+                height: 260px;
+                float: none;
+                z-index: 100;
+                left: calc(50% - 130px);
+            }
+        }
+    }
+}

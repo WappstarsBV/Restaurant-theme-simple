@@ -113,3 +113,75 @@
         }
     }
 }
+
+
+/*---------------------------------------------------------
+-- Medium (md) Screen Size Media Queries - less than 992px
+---------------------------------------------------------*/
+@include media-breakpoint-down(md) {
+    .rt-uno-diensten-dienst {
+        .diensten-content {
+            .dienst {
+                padding: 10rem 3rem 3rem 3rem;
+    
+                &:nth-of-type(even) {
+                    .dienst-content {
+                        float: none;
+                    }
+        
+                    .dienst-image {
+                        left: 0;
+                        right: 0;
+                        height: 380px;
+                        width: 100%;
+                        top: -230px;
+                    }
+                }
+
+                .dienst-content {
+                    width: 100%;
+                }
+
+                .dienst-image {
+                    left: 0;
+                    right: 0;
+                    height: 380px;
+                    width: 100%;
+                    top: -230px;
+                }
+            }
+        }
+    }
+}
+
+/*---------------------------------------------------------
+-- Extra Small (xs) Screen Size Media Queries - less than 576px
+---------------------------------------------------------*/
+@include media-breakpoint-down(xs) {
+    
+    .rt-uno-diensten-dienst {
+        .diensten-content {
+            .dienst {
+                padding: 10rem 1.5rem 1.5rem 1.5rem;
+    
+                &:nth-of-type(even) {
+                    .dienst-image {
+                        left: -50px;
+                        right: -50px;
+                        height: 380px;
+                        width: auto;
+                        top: -230px;
+                    }
+                }
+
+                .dienst-image {
+                    left: -50px;
+                    right: -50px;
+                    height: 380px;
+                    width: auto;
+                    top: -230px;
+                }
+            }
+        }
+    }
+}
