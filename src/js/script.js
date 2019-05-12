@@ -110,7 +110,9 @@ document.addEventListener('click', (event) => {
     }
 });
 
-
+/*
+* Mobile menu logic
+*/
 const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu-and-contact');
 const closeMenu = document.querySelector('.close-nav');
@@ -126,7 +128,9 @@ document.addEventListener('click', (event) => {
     }
 });
 
-
+/*
+* On load event
+*/
 window.addEventListener('load', () => {
     // get screen width
     const width = screen.width;
