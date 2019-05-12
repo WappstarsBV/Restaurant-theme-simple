@@ -48,3 +48,46 @@
         }
     }
 }
+
+/*---------------------------------------------------------
+-- Medium (md) Screen Size Media Queries - less than 992px
+---------------------------------------------------------*/
+@include media-breakpoint-down(md) {
+    .rt-uno-contact-header {
+        padding: 5rem 0 8rem 0;
+
+        .contact-header  {
+            .contact-header-content {
+                width: 80%;
+            }
+        }
+    }
+}
+
+/*---------------------------------------------------------
+-- Small (sm) Screen Size Media Queries - less than 768px
+---------------------------------------------------------*/
+@include media-breakpoint-down(sm) {
+    .rt-uno-contact-header {
+        padding: 4rem 0 7rem 0;
+
+        .contact-header  {
+            .contact-header-content {
+                width: 85%;
+            }
+        }
+    }
+}
+
+/*---------------------------------------------------------
+-- Extra Small (xs) Screen Size Media Queries - less than 576px
+---------------------------------------------------------*/
+@include media-breakpoint-down(xs) {
+    .rt-uno-contact-header {
+        .contact-header  {
+            .contact-header-content {
+                width: 90%;
+            }
+        }
+    }
+}

@@ -34,9 +34,9 @@
         transition: all 400ms ease-in-out;
         opacity: 0;
         visibility: hidden;
+        cursor: pointer;
 
         &:hover {
-            cursor: pointer;
             user-select: none;
         }
     }
@@ -156,6 +156,7 @@
         background-image: url('../../images/hamburger.svg');
         @include background(center, center, 50%, no-repeat);
         transition: all 350ms ease;
+        cursor: pointer;
 
         &:hover {
             background-color: lighten($color__background-hr, 7%);
@@ -214,12 +215,12 @@
         overflow-y: auto;
         opacity: 1;
         visibility: visible;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
         z-index: 1000;
         transition: all 350ms ease-in-out;
 
         &.menu-and-contact-visible {
             right: 0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
             .close-nav {
                 opacity: 1;

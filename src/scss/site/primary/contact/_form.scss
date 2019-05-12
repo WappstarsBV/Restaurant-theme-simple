@@ -33,7 +33,7 @@
     }
 
     .contact-wrapper {
-        width: 50%;
+        width: 60%;
         margin: 0 auto;
 
         .contact-form {
@@ -74,6 +74,10 @@
                 }
             }
 
+            textarea {
+                height: 220px;
+            }
+
             input[type="submit"] {
                 display: inline-block;
                 padding: .75rem 2rem;
@@ -82,6 +86,7 @@
                 background-color: $main-color;
                 color: $white;
                 font-size: $fz;
+                transition: map-get( $trans, 250 );
     
                 &:hover {
                     background-color: darken($main-color, 7%);
@@ -229,5 +234,84 @@ div.wpcf7 {
     .ajax-loader {
         background-image: url(../../images/loading-cf.svg);
         background-size: contain;
+    }
+}
+
+
+/*
+* Merdia queries
+**/
+@media screen and (max-width: 1420px) {
+    .rt-uno-contact-form {
+        .contact-wrapper {
+            width: 80%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .rt-uno-contact-form {
+        .contact-wrapper {
+            width: 90%;
+        }
+    }
+}
+
+/*---------------------------------------------------------
+-- Medium (md) Screen Size Media Queries - less than 992px
+---------------------------------------------------------*/
+@include media-breakpoint-down(md) {
+    .rt-uno-contact-form {
+        .contact-wrapper {
+            .contact-form {
+                width: 100%;
+                float: none;
+                padding: 1.5rem;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            }
+
+            .openings-contact {
+                width: 100%;
+                float: none;
+                margin-top: 2rem;
+
+                .openingstijden {
+                    width: 48%;
+                    float: left;
+                    padding: 1.5rem;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                }
+
+                .contactgegevens {
+                    width: 48%;
+                    float: right;
+                    padding: 1.5rem;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                }
+            }
+        }
+    }
+}
+
+/*---------------------------------------------------------
+-- Small (sm) Screen Size Media Queries - less than 768px
+---------------------------------------------------------*/
+@include media-breakpoint-down(sm) {
+    .rt-uno-contact-form {
+        .contact-wrapper {
+            .openings-contact {
+                .openingstijden {
+                    width: 100%;
+                    float: none;
+                }
+
+                .contactgegevens {
+                    width: 100%;
+                    float: none;
+                    margin-top: 2rem;
+                }
+            }
+        }
     }
 }
