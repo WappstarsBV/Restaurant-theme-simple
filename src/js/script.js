@@ -1,6 +1,9 @@
 // import App from './modules/app.js';
 // const app = new App();
 
+
+require('./includes/swiped-events.js');
+
 /**
  * Functions
  */
@@ -116,16 +119,27 @@ document.addEventListener('click', (event) => {
 const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu-and-contact');
 const closeMenu = document.querySelector('.close-nav');
+const overlay = document.querySelector('.overlay');
 document.addEventListener('click', (event) => {
     if(event.target === hamburger || event.target === hamburger.firstElementChild) {
         menu.classList.add('menu-and-contact-visible');
         hamburger.parentElement.classList.add('clicked');
         document.getElementsByTagName('html')[0].style.overflowY = "hidden";
-    } else if (event.target === closeMenu) {
+        document.getElementsByTagName('body')[0].style.overflowY = "hidden";
+    } else if (event.target === closeMenu || event.target === overlay) {
         menu.classList.remove('menu-and-contact-visible');
         hamburger.parentElement.classList.remove('clicked');
-        document.getElementsByTagName('html')[0].style.overflowY = "scroll";
+        document.getElementsByTagName('html')[0].style.overflowY = "auto";
+        document.getElementsByTagName('body')[0].style.overflowY = "auto";
     }
+});
+
+
+menu.addEventListener('swiped-right', () => {
+    menu.classList.remove('menu-and-contact-visible');
+    hamburger.parentElement.classList.remove('clicked');
+    document.getElementsByTagName('html')[0].style.overflowY = "auto";
+    document.getElementsByTagName('body')[0].style.overflowY = "auto";
 });
 
 /*

@@ -21,19 +21,15 @@
     text-align: right;
 
     .close-nav {
-        position: fixed;
-        right: -30px;
-        top: 62px;
-        width: 30px;
-        height: 30px;
+        display: block;
+        margin-bottom: .5rem;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
-        background-color: $main-color;
-        color:$white;
-        font-size: 18px;
+        background-color: $color__background-button;
+        color: $black;
+        font-size: 22px;
         font-weight: 700;
-        transition: all 400ms ease-in-out;
-        opacity: 0;
-        visibility: hidden;
         cursor: pointer;
 
         &:hover {
@@ -217,7 +213,7 @@
         opacity: 1;
         visibility: visible;
         z-index: 1000;
-        transition: all 350ms ease-in-out;
+        transition: all 300ms ease-in-out;
 
         &.menu-and-contact-visible {
             right: 0;
@@ -226,7 +222,6 @@
             .close-nav {
                 opacity: 1;
                 visibility: visible;
-                right: 285px;
             }
         }
 
