@@ -241,6 +241,16 @@ div.wpcf7 {
 /*
 * Merdia queries
 **/
+@media screen and (min-width: 1420px) {
+    .rt-uno-contact-form {
+        .contact-wrapper {
+            width: 45%;
+        }
+    }
+}
+
+
+
 @media screen and (max-width: 1420px) {
     .rt-uno-contact-form {
         .contact-wrapper {
