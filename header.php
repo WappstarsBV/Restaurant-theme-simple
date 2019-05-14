@@ -75,6 +75,14 @@
 			</div><!-- /.menu-and-contact -->
 		
 			<div class="mobile-navigation">
+					<?php if($email) { ?>
+					<div id="email"><a href="mailto:<?php echo $email; ?>" class="email" target="_blank"><i class="fa fa-at"></i></a></div><!-- /.email -->
+					<?php } ?>
+					
+					<?php if($tel) { ?>
+					<div id="phone"><a href="tel:<?php echo $tel; ?>" class="phone" target="_blank"><i class="fa fa-phone"></i></a></div><!-- /.phone -->
+					<?php } ?>
+
 					<div class="hamburger"></div><!-- /.hamburger -->
 					<div class="overlay"></div><!-- /.overlay -->
 			</div><!-- /.mobile-navigation -->

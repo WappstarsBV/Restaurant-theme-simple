@@ -21,7 +21,9 @@
     text-align: right;
 
     .close-nav {
-        display: block;
+        display: none;
+        justify-content: center;
+        align-items: center;
         margin-bottom: .5rem;
         width: 35px;
         height: 35px;
@@ -134,6 +136,7 @@
         top: 50%;
         left: 30px;
         right: 65px;
+        z-index: -1;
     }
 
     &.clicked {
@@ -141,6 +144,40 @@
             visibility: visible;
             opacity: 1;
         }
+    }
+
+    #email, #phone {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $white;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $main-color;
+            color: $white;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    #phone {
+        right: 55px;
+    }
+
+    #email {
+        right: 105px;
     }
 
     .hamburger {
@@ -227,8 +264,6 @@
 
         .close-nav {
             display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .contact {
@@ -260,6 +295,10 @@
 
     .mobile-navigation {
         display: block;
+
+        #email, #phone {
+            display: flex;
+        }
     }
 }
 
