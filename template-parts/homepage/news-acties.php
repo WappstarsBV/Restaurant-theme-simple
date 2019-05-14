@@ -44,7 +44,11 @@
             /* Restore original Post Data */
             wp_reset_postdata();
         } else {
-            // no posts found
+            ?>
+            <div class="geen-acties">
+                <h3><?php esc_html_e( 'Geen acties op dit moment', 'rt-uno' ) ?></h3>
+            </div><!-- /.geen-acties -->
+            <?php 
         }
 
         ?>
