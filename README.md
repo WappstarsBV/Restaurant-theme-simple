@@ -1,5 +1,11 @@
 ## Restaurant theme Uno
-Simple and scalable theme for reataurants.
+Simple and clean theme for restaurants.
+
+### Required plugins
+1. Advanced custom fields PRO - https://www.advancedcustomfields.com/pro/
+2. Contact form 7 - https://sr.wordpress.org/plugins/contact-form-7/
+3. Mailchimp for WordPress - https://nl.wordpress.org/plugins/mailchimp-for-wp/
+**NOTE: Install plugins first.
 
 ### Instructions
 1. git clone https://github.com/WappstarsBV/rt-uno.git in local wp-content/themes
