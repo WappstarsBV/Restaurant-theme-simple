@@ -4,6 +4,8 @@ $gallery = get_field('galerij_over_ons', 'options');
 //var_dump($gallery);
 ?>
 
+<?php if($gallery) : ?>
+
 <div class="rt-uno-over-gallery clearfix">
     <div class="top-curve">
         <?php include ( get_stylesheet_directory() . '/images/white-curve.svg' ); ?>
@@ -22,3 +24,5 @@ foreach($gallery as $item) {
     <?php include ( get_stylesheet_directory() . '/images/white-curve-reflect.svg' ); ?>
     </div>
 </div><!-- /.rt-uno-over-gallery -->
+
+<?php endif; ?>
