@@ -15,7 +15,7 @@ Simple and clean theme for restaurants.
 4. gulp watch
 
 ### Editing
-* Main theme color is located in **_src/scss/variables-site/_colors.scss_** under variable $main-color
+* Main theme color is located in **_src/scss/variables-site/_\colors.scss_** under variable $main-color
 * Fonts are included on the top of file style.scss located in **_src/scss_**
 * Change fonts in **_src/scss/variables-site/_typography.scss_**
 * ACF fields and form templates are located in respective directories
