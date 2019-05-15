@@ -18,6 +18,7 @@ Simple and clean theme for restaurants.
 * Main theme color is located in src/scss/variables-site/_colors.scss under variable $main-color
 * Fonts are included on the top of file style.scss located in src/scss
 * Change fonts in src/scss/variables-site/_typography.scss
+* ACF fields and form templates are located in respective folders
 
 ### This is what you get if you use default settings:
 
