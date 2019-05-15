@@ -19,5 +19,6 @@ Simple and clean theme for restaurants.
 * Fonts are included on the top of file style.scss located in src/scss
 * Change fonts in src/scss/variables-site/_typography.scss
 
-This is what you get:
+### This is what you get if you use default settings:
+
 ![Alt text](homepage.jpg?raw=true "Homepage")
