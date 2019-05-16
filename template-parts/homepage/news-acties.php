@@ -27,7 +27,7 @@
         if ( $the_query->have_posts() ) {
             while ( $the_query->have_posts() ) {
                 $the_query->the_post();
-                $content = strip_tags(mb_strimwidth(get_the_content(), 0, 250, '...'));
+                $content = strip_tags(mb_strimwidth(get_the_content(), 0, 250, '...'), '<b>, <strong>');
                 echo
                 '
                 <div class="na-post">

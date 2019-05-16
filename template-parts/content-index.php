@@ -19,7 +19,7 @@
 
 	<div class="post-content">
 		<h2><?php the_title(); ?></h2>
-		<p><?php echo strip_tags(mb_strimwidth(get_the_content(), 0, 150, ' ...')); ?></p>
+		<p><?php echo strip_tags(mb_strimwidth(get_the_content(), 0, 150, ' ...'), '<b>, <strong>'); ?></p>
 		<span class="lees-meer"><?php esc_html_e( 'Lees meer', 'rt-uno' ); ?></span>
 	</div><!-- /.post-content -->
 	
