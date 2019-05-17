@@ -13,25 +13,6 @@
         z-index: 100;
     }
 
-    .top-curve {
-        height: 30px;
-        width: 100%;
-        position: absolute;
-        top: -1px;
-
-        svg {
-            display: block;
-            height: 30px;
-            width: 100%;
-            path {
-                display: block;
-                height: 30px;
-                width: 100%;
-                fill: $main-color;
-            }
-        }
-    }
-
     .contact-map {
         iframe {
             display: block;
