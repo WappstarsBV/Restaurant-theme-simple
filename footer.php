@@ -24,6 +24,9 @@
 		//}
 		?>
 		</div><!-- /.legals-menu -->
+		<div class="adres container clearfix">
+		<?php esc_html_e('Adres', 'rt-uno'); ?> - <?php the_field('adres', 'options'); ?> <?php the_field('postcode', 'options'); ?>, <?php the_field('plaats', 'options'); ?>
+		</div><!-- /.adres -->
 		<div class="openings container clearfix">
 			<?php esc_html_e('Openingstijden', 'rt-uno'); ?> - <?php the_field('openings', 'options'); ?>
 		</div><!-- /.openings -->
