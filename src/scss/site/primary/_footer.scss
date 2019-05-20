@@ -11,6 +11,7 @@
     .legals-menu {
         position: relative;
         margin-top: -16px;
+        text-align: center;
         z-index: 2;
 
         a {
@@ -33,11 +34,53 @@
     .adres {
         padding: 2rem 1rem .5rem 1rem;
         font-size: 13px;
+
+        h3 {
+            font-size: 22px;
+        }
+
+        .adres-inner {
+            width: 200px;
+            text-align: center;
+            margin: 0 auto;
+        }
     }
 
     .openings {
         padding: .5rem 1rem .5rem 1rem;
         font-size: 13px;
+
+        h3 {
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .openings-inner {
+            width: 200px;
+            margin: 0 auto;
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    span {
+                        width: 50%;
+
+                        &:first-of-type {
+                            text-align: left;
+                            float: left;
+                        }
+
+                        &:last-of-type {
+                            text-align: right;
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .site-info {
@@ -68,15 +111,18 @@
     .site-footer {
         .site-info {
             > div {
+                text-align: center;
+                
                 &:first-of-type {
                     width: 100%;
                     float: none;
+                    margin-top: 1rem;
                     margin-bottom: 1rem;
                 }
                 &:last-of-type {
                     width: 100%;
                     float: none;
-                    text-align: left;
+                    text-align: center;
                 }
             }
         }

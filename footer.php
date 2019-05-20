@@ -9,6 +9,8 @@
  * @package rt-uno
  */
 
+// Openingstijden
+$op = get_field('openingstijden', 'options');
 ?>
 
 	</div> <!-- // .row -->
@@ -25,10 +27,28 @@
 		?>
 		</div><!-- /.legals-menu -->
 		<div class="adres container clearfix">
-		<?php esc_html_e('Adres', 'rt-uno'); ?> - <?php the_field('adres', 'options'); ?> <?php the_field('postcode', 'options'); ?>, <?php the_field('plaats', 'options'); ?>
+			<div class="adres-inner">
+				<h3><?php esc_html_e('Adres', 'rt-uno'); ?></h3>
+				<?php the_field('adres', 'options'); ?> <?php the_field('postcode', 'options'); ?>, <?php the_field('plaats', 'options'); ?>
+			</div>
 		</div><!-- /.adres -->
 		<div class="openings container clearfix">
-			<?php esc_html_e('Openingstijden', 'rt-uno'); ?> - <?php the_field('openings', 'options'); ?>
+			<div class="openings-inner">
+				<h3><?php esc_html_e('Openingstijden', 'rt-uno'); ?></h3>
+				<?php
+				echo '<ul>';
+                foreach($op as $o)
+                {
+                    echo
+                    '
+                    <li>
+                        <span>'. $o['dag'] .':</span><span>'. $o['tijd'] .'</span>
+                    </li>
+                    ';
+                }
+				echo '</ul>';
+				?>
+			</div>
 		</div><!-- /.openings -->
 		<div class="site-info container clearfix">
 			<div class="copy">

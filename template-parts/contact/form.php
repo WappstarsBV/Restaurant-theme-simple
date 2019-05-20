@@ -57,8 +57,4 @@ $form = get_field('contact_formulier', 'options');
             </div><!-- /.contactgegevens -->
         </div><!-- /.openigs-contact -->
     </div><!-- /.container -->
-
-    <div class="bottom-curve">
-    <?php include ( get_stylesheet_directory() . '/images/white-curve-reflect.svg' ); ?>
-    </div>
 </div><!-- /.rt-uno-contact-form -->

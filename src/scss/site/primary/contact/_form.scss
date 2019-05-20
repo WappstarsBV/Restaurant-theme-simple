@@ -207,27 +207,6 @@
             }
         }
     }
-
-    .bottom-curve {
-        height: 60px;
-        width: 100%;
-        position: absolute;
-        bottom: -1px;
-        z-index: 2;
-
-        svg {
-            display: block;
-            height: 60px;
-            width: 100%;
-        }
-            
-        .bottom-path {
-            display: block;
-            height: 60px;
-            width: 100%;
-            fill: $main-color !important;
-        }
-    }
 }
 
 div.wpcf7 {
